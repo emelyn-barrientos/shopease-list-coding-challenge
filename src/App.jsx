@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="grid grid-cols-3 gap-4 justify-center">
+      <div className="grid grid-cols-3 gap-10">
         <ShoppingList />
         <ShoppingList />
         <ShoppingList />
