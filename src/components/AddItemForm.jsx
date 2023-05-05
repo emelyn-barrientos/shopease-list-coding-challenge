@@ -15,8 +15,15 @@ function AddItemForm(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={newItem} onChange={handleNewItemChange} />
-      <button type="submit">Add Item</button>
+      <input
+        type="text"
+        value={newItem}
+        onChange={handleNewItemChange}
+        className="rounded-md"
+      />
+      <button type="submit" className="bg-white text-md rounded-md">
+        GO
+      </button>
     </form>
   )
 }
