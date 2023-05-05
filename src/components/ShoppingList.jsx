@@ -4,6 +4,10 @@ import { useState } from 'react'
 function ShoppingList() {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3'])
 
+  const handleAddItem = (newItem) => {
+    setItems([...items, newItem])
+  }
+
   return (
     <div className="max-w-full justify-self-center w-full">
       <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6">
@@ -17,7 +21,7 @@ function ShoppingList() {
             </li>
           ))}
         </ul>
-        <AddItemForm />
+        <AddItemForm onAddItem={handleAddItem} />
       </div>
     </div>
   )
