@@ -1,7 +1,10 @@
+import { useState } from 'react'
+
 function AddItemForm() {
+  const [itemName, setItemName] = useState('')
   return (
     <form>
-      <p>Form here!</p>
+      <input type="text" value={itemName} />
     </form>
   )
 }
