@@ -1,10 +1,14 @@
 import { useState } from 'react'
 
 function AddItemForm() {
-  const [itemName, setItemName] = useState('')
+  const [newItem, setNewItem] = useState('')
+
+  const handleNewItemChange = (e) => {
+    setNewItem(e.target.value)
+  }
   return (
     <form>
-      <input type="text" value={itemName} />
+      <input type="text" value={newItem} onChange={handleNewItemChange} />
     </form>
   )
 }
