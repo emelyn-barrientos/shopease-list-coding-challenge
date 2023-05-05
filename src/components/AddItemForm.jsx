@@ -14,11 +14,27 @@ function AddItemForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={newItem} onChange={handleNewItemChange} />
-      <button type="submit">Add Item</button>
+    <form onSubmit={handleSubmit} className="flex justify-between">
+      <div className="flex">
+        <input
+          type="text"
+          value={newItem}
+          onChange={handleNewItemChange}
+          className="w-full font-mono rounded-md border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 mr-4"
+        />
+        <button
+          type="submit"
+          className="bg-white hover:bg-blue-600 text-gray-900 hover:text-white font-mono text-md rounded-md px-4 py-2"
+        >
+          GO
+        </button>
+      </div>
     </form>
   )
 }
 
 export default AddItemForm
+
+// THINGS TO ADD:
+// [] Must require text input to form to submit
+// [] Make width of form same width as list items
