@@ -19,9 +19,12 @@ function AddItemForm(props) {
         type="text"
         value={newItem}
         onChange={handleNewItemChange}
-        className="rounded-md"
+        className="w-full rounded-md border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-      <button type="submit" className="bg-white text-md rounded-md">
+      <button
+        type="submit"
+        className="bg-white hover:bg-blue-600 text-gray-900 hover:text-white font-mono text-md rounded-md px-4 py-2"
+      >
         GO
       </button>
     </form>
