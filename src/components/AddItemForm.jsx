@@ -15,7 +15,7 @@ function AddItemForm(props) {
 
   return (
     <form onSubmit={handleSubmit} className="flex justify-between">
-      <div className="flex">
+      <div className="flex w-full">
         <input
           type="text"
           value={newItem}
@@ -37,5 +37,5 @@ function AddItemForm(props) {
 export default AddItemForm
 
 // -- THINGS TO ADD:
-// [] Must require text input to form to submit
-// [] Make width of form same width as list items
+// [X] Must require text input to form to submit
+// [X] Make width of form same width as list items
