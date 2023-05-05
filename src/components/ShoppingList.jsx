@@ -18,7 +18,7 @@ function ShoppingList() {
           {items.map((item, index) => (
             <li
               key={index}
-              className="flex items-center rounded-md bg-white px-3 py-2"
+              className="flex items-center rounded-md bg-white px-3 py-2 my-5"
             >
               <p className="font-mono text-gray-900 text-lg">{item}</p>
             </li>
