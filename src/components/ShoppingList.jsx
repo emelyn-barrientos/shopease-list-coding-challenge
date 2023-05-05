@@ -16,7 +16,10 @@ function ShoppingList() {
         </h3>
         <ul className="divide-y divide-gray-300">
           {items.map((item, index) => (
-            <li key={index} className="flex items-center py-2">
+            <li
+              key={index}
+              className="flex items-center rounded-md bg-white px-3 py-2"
+            >
               <p className="font-mono text-gray-900 text-lg">{item}</p>
             </li>
           ))}
@@ -33,5 +36,5 @@ export default ShoppingList
 // [] Props: which ones do I need to get from App.jsx?
 // [] Investigate how to handle moving items between lists (Redux?)
 // [] Move shopping list <h3> outside of gray div
-// [] Add styling to each list itme (see Figma)
+// [] Add styling to each list items (see Figma)
 // [] Add height to list; add space between items and forms
