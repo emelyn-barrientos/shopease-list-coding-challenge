@@ -1,13 +1,13 @@
 function ShoppingList() {
   return (
-    <>
-      <h2>Shopping List</h2>
+    <div>
+      <h3 className="font-mono font-bold text-xl text-center">Shopping List</h3>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li className="text-center">Item 1</li>
+        <li className="text-center">Item 2</li>
+        <li className="text-center">Item 3</li>
       </ul>
-    </>
+    </div>
   )
 }
 
