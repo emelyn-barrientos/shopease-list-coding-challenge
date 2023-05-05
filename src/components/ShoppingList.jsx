@@ -5,9 +5,15 @@ function ShoppingList() {
         Shopping List
       </h3>
       <ul className="divide-y divide-gray-300">
-        <li className="text-center">Item 1</li>
-        <li className="text-center">Item 2</li>
-        <li className="text-center">Item 3</li>
+        <li className="flex items-center py-2">
+          <p className="font-mono text-gray-900 text-lg">Item 1</p>
+        </li>
+        <li className="flex items-center py-2">
+          <p className="font-mono text-gray-900 text-lg">Item 2</p>
+        </li>
+        <li className="flex items-center py-2">
+          <p className="font-mono text-gray-900 text-lg">Item 3</p>
+        </li>
       </ul>
     </div>
   )
