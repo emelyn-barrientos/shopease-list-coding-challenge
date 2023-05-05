@@ -1,3 +1,5 @@
+import AddItemForm from './AddItemForm'
+
 function ShoppingList() {
   return (
     <div className="max-w-full justify-self-center w-full">
@@ -16,6 +18,7 @@ function ShoppingList() {
             <p className="font-mono text-gray-900 text-lg">Item 3</p>
           </li>
         </ul>
+        <AddItemForm />
       </div>
     </div>
   )
