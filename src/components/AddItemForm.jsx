@@ -1,14 +1,22 @@
 import { useState } from 'react'
 
-function AddItemForm() {
+function AddItemForm(props) {
   const [newItem, setNewItem] = useState('')
 
   const handleNewItemChange = (e) => {
     setNewItem(e.target.value)
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.onAddItem(newItem)
+    setNewItem('')
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" value={newItem} onChange={handleNewItemChange} />
+      <button type="submit">Add Item</button>
     </form>
   )
 }
