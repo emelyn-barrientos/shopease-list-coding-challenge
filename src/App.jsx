@@ -1,7 +1,14 @@
 import Header from './components/Header'
 import ShoppingList from './components/ShoppingList'
+import { useState } from 'react'
 
 function App() {
+  const [lists, setLists] = useState({
+    list1: ['Item 1', 'Item 2', 'Item 3'],
+    list2: ['Item 4', 'Item 5'],
+    list3: ['Item 6'],
+  })
+
   return (
     <>
       <Header />
