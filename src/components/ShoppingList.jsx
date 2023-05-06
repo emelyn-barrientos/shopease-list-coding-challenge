@@ -40,4 +40,4 @@ export default ShoppingList
 // [X] Move shopping list <h3> outside of gray div
 // [X] Add styling to each list items (see Figma)
 // [X] Add space between items and forms
-// [] Add fixed height to list
+// [X] Add fixed height to list
