@@ -6,9 +6,15 @@ function App() {
     <>
       <Header />
       <div className="grid grid-cols-3 gap-10 mt-16 mx-60">
-        <ShoppingList />
-        <ShoppingList />
-        <ShoppingList />
+        <ShoppingList
+          listName={'List 1'}
+          items={['Item 1', 'Item 2', 'Item 3']}
+        />
+        <ShoppingList
+          listName={'List 2'}
+          items={['Item 4', 'Item 5', 'Item 3']}
+        />
+        <ShoppingList listName={'List 3'} items={['Item 6']} />
       </div>
     </>
   )
@@ -17,4 +23,4 @@ function App() {
 export default App
 
 // -- THINGS TO ADD:
-// [] Props: which ones do I need to pass down to ShoppingList.jsx?
+// [X] Props: which ones do I need to pass down to ShoppingList.jsx?
