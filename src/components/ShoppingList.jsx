@@ -8,6 +8,24 @@ function ShoppingList({ listName, items, onMoveItem, fromList }) {
     setItemsState([...itemsState, newItem])
   }
 
+  const handleMoveItem = (index, selectedList) => {
+    const updatedItems = [...itemsState]
+    const itemToMove = updatedItems[index]
+    updatedItems.splice(index, 1)
+
+    switch (selectedList) {
+      case 'List 1':
+        setItemsState([{ ...itemToMove }, ...updatedItems])
+        break
+      case 'List 2':
+      case 'List 3':
+        setItemsState([...updatedItems, { ...itemToMove }])
+        break
+      default:
+        break
+    }
+  }
+
   return (
     <div className="max-w-full justify-self-center w-full">
       <h3 className="font-mono font-bold text-xl text-center mb-4">
@@ -22,7 +40,7 @@ function ShoppingList({ listName, items, onMoveItem, fromList }) {
             >
               <p className="font-mono text-sm text-gray-900">{item}</p>
               <div className="ml-4">
-                <select>
+                <select onChange={(e) => handleMoveItem(index, e.target.value)}>
                   <option>Select list</option>
                   <option>List 1</option>
                   <option>List 2</option>
