@@ -24,7 +24,7 @@ function ShoppingList({ listName, items }) {
             </li>
           ))}
         </ul>
-        <div className="self-start">
+        <div className="self-start w-full">
           <AddItemForm onAddItem={handleAddItem} className="mt-4" />
         </div>
       </div>
