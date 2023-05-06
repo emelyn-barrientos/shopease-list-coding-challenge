@@ -20,7 +20,7 @@ function ShoppingList() {
               key={index}
               className="flex items-center rounded-md bg-white px-3 py-2 my-5"
             >
-              <p className="font-mono text-sm text-gray-900 text-lg">{item}</p>
+              <p className="font-mono text-sm text-gray-900">{item}</p>
             </li>
           ))}
         </ul>
@@ -37,4 +37,5 @@ export default ShoppingList
 // [] Investigate how to handle moving items between lists (Redux?)
 // [] Move shopping list <h3> outside of gray div
 // [X] Add styling to each list items (see Figma)
-// [] Add height to list; add space between items and forms
+// [X] Add space between items and forms
+// [] Add fixed height to list
