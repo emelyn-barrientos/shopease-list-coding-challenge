@@ -1,7 +1,7 @@
 import AddItemForm from './AddItemForm'
 import { useState } from 'react'
 
-function ShoppingList({ listName, items }) {
+function ShoppingList({ listName, items, onMoveItem, fromList }) {
   const [itemsState, setItemsState] = useState(items)
 
   const handleAddItem = (newItem) => {
