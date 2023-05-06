@@ -13,18 +13,20 @@ function ShoppingList({ listName, items }) {
       <h3 className="font-mono font-bold text-xl text-center mb-4">
         {listName}
       </h3>
-      <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6">
-        <ul className="divide-y divide-gray-300">
+      <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6 h-full flex flex-col justify-between">
+        <ul className="divide-y divide-gray-300 flex-grow">
           {itemsState.map((item, index) => (
             <li
               key={index}
-              className="flex items-center rounded-md bg-white px-3 py-2 my-5"
+              className="flex items-center rounded-md bg-white mb-4 px-3 py-2"
             >
               <p className="font-mono text-sm text-gray-900">{item}</p>
             </li>
           ))}
         </ul>
-        <AddItemForm onAddItem={handleAddItem} />
+        <div className="self-start w-full">
+          <AddItemForm onAddItem={handleAddItem} className="mt-4" />
+        </div>
       </div>
     </div>
   )
