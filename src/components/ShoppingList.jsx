@@ -15,15 +15,19 @@ function ShoppingList({ listName, items, onMoveItem, fromList }) {
 
     switch (selectedList) {
       case 'List 1':
-        setItemsState([{ ...itemToMove }, ...updatedItems])
+        onMoveItem({ ...itemToMove }, 'List 1', fromList)
         break
       case 'List 2':
+        onMoveItem({ ...itemToMove }, 'List 2', fromList)
+        break
       case 'List 3':
-        setItemsState([...updatedItems, { ...itemToMove }])
+        onMoveItem({ ...itemToMove }, 'List 3', fromList)
         break
       default:
         break
     }
+
+    setItemsState(updatedItems)
   }
 
   return (
