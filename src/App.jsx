@@ -5,7 +5,7 @@ import { useState } from 'react'
 function App() {
   const [lists, setLists] = useState(() => [
     {
-      id: 1,
+      id: 'list1',
       name: 'List 1',
       items: [
         { id: 1, name: 'Item 1' },
@@ -14,14 +14,14 @@ function App() {
       ],
     },
     {
-      id: 2,
+      id: 'list2',
       name: 'List 2',
       items: [
         { id: 4, name: 'Item 4' },
         { id: 5, name: 'Item 5' },
       ],
     },
-    { id: 3, name: 'List 3', items: [{ id: 6, name: 'Item 6' }] },
+    { id: 'list3', name: 'List 3', items: [{ id: 6, name: 'Item 6' }] },
   ])
 
   const handleMoveItem = (item, fromListId, toListId) => {
@@ -72,7 +72,7 @@ function App() {
             items={list.items}
             onMoveItem={handleMoveItem}
             onAddItem={handleAddItem}
-            fromListId={list.id}
+            listId={list.id}
           />
         ))}
       </div>
