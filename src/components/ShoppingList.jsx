@@ -1,7 +1,7 @@
 import AddItemForm from './AddItemForm'
 import { useState } from 'react'
 
-function ShoppingList() {
+function ShoppingList({ listName }) {
   const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3'])
 
   const handleAddItem = (newItem) => {
@@ -12,7 +12,7 @@ function ShoppingList() {
     <div className="max-w-full justify-self-center w-full">
       <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6">
         <h3 className="font-mono font-bold text-xl text-center mb-4">
-          Shopping List
+          {listName}
         </h3>
         <ul className="divide-y divide-gray-300">
           {items.map((item, index) => (
