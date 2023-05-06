@@ -6,9 +6,9 @@ function App() {
     <>
       <Header />
       <div className="grid grid-cols-3 gap-10 mt-16 mx-60">
-        <ShoppingList />
-        <ShoppingList />
-        <ShoppingList />
+        <ShoppingList listName={'List 1'} />
+        <ShoppingList listName={'List 2'} />
+        <ShoppingList listName={'List 3'} />
       </div>
     </>
   )
