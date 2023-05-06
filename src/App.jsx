@@ -10,19 +10,25 @@ function App() {
   ])
 
   const handleMoveItem = (item, fromList, toList) => {
-    const fromListItems = [...lists[fromList]]
-    const toListItems = [...lists[toList]]
-    const index = fromListItems.indexOf(item)
+    const updatedLists = [...lists]
+    const fromListIndex = updatedLists.findIndex(
+      (list) => list.name === fromList
+    )
+    const toListIndex = updatedLists.findIndex((list) => list.name === toList)
 
-    if (index > -1) {
-      fromListItems.splice(index, 1)
-      toListItems.push(item)
+    if (fromListIndex > -1 && toListIndex > -1) {
+      const fromListItems = [...updatedLists[fromListIndex].items]
+      const toListItems = [...updatedLists[toListIndex].items]
+      const index = fromListItems.indexOf(item)
 
-      setLists((prevLists) => ({
-        ...prevLists,
-        [fromList]: fromListItems,
-        [toList]: toListItems,
-      }))
+      if (index > -1) {
+        fromListItems.splice(index, 1)
+        toListItems.push(item)
+
+        updatedLists[fromListIndex].items = fromListItems
+        updatedLists[toListIndex].items = toListItems
+        setLists(updatedLists)
+      }
     }
   }
 
