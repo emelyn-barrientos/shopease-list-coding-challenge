@@ -21,6 +21,14 @@ function ShoppingList({ listName, items, onMoveItem, fromList }) {
               className="flex items-center rounded-md bg-white mb-4 px-3 py-2"
             >
               <p className="font-mono text-sm text-gray-900">{item}</p>
+              <div className="ml-4">
+                <select>
+                  <option>Select list</option>
+                  <option>List 1</option>
+                  <option>List 2</option>
+                  <option>List 3</option>
+                </select>
+              </div>
             </li>
           ))}
         </ul>
