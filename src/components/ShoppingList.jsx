@@ -15,7 +15,7 @@ function ShoppingList({ listName, items }) {
       </h3>
       <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6">
         <ul className="divide-y divide-gray-300">
-          {items.map((item, index) => (
+          {itemsState.map((item, index) => (
             <li
               key={index}
               className="flex items-center rounded-md bg-white px-3 py-2 my-5"
