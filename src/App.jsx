@@ -25,27 +25,20 @@ function App() {
   ])
 
   const handleMoveItem = (item, fromListId, toListId) => {
-    const updatedLists = [...lists]
-    const fromListIndex = updatedLists.findIndex(
-      (list) => list.id === fromListId
-    )
-    const toListIndex = updatedLists.findIndex((list) => list.id === toListId)
-
-    if (fromListIndex > -1 && toListIndex > -1) {
-      const fromListItems = [...updatedLists[fromListIndex].items]
-      const toListItems = [...updatedLists[toListIndex].items]
-      const itemIndex = fromListItems.findIndex((i) => i.id === item.id)
-
-      if (itemIndex > -1) {
-        const removedItem = fromListItems.splice(itemIndex, 1)[0]
-        toListItems.push(removedItem)
-
-        updatedLists[fromListIndex].items = fromListItems
-        updatedLists[toListIndex].items = toListItems
-
-        setLists(updatedLists)
-      }
-    }
+    setLists((prevLists) => {
+      const updatedLists = prevLists.map((list) => {
+        if (list.id === fromListId) {
+          const items = list.items.filter((i) => i.id !== item.id)
+          return { ...list, items }
+        }
+        if (list.id === toListId) {
+          const items = [...list.items, item]
+          return { ...list, items }
+        }
+        return list
+      })
+      return updatedLists
+    })
   }
 
   const handleAddItem = (newItem, listId) => {
