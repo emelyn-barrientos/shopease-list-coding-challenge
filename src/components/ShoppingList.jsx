@@ -11,6 +11,12 @@ function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
     onMoveItem(itemToMove, listId, selectedListId)
   }
 
+  const selectOptions = [
+    { label: 'List 1', value: 'list1' },
+    { label: 'List 2', value: 'list2' },
+    { label: 'List 3', value: 'list3' },
+  ]
+
   return (
     <div className="max-w-full justify-self-center w-full">
       <h3 className="font-mono font-bold text-xl text-center mb-4">
