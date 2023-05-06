@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 function AddItemForm(props) {
   const [newItem, setNewItem] = useState('')
+  const [lastId, setLastId] = useState(6)
 
   const handleNewItemChange = (e) => {
     setNewItem(e.target.value)
@@ -9,7 +10,12 @@ function AddItemForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.onAddItem(newItem)
+    const newItemWithId = {
+      id: lastId + 1,
+      name: newItem,
+    }
+    props.onAddItem(newItemWithId)
+    setLastId(lastId + 1)
     setNewItem('')
   }
 
