@@ -13,12 +13,9 @@ function App() {
     <>
       <Header />
       <div className="grid grid-cols-3 gap-10 mt-16 mx-60">
-        <ShoppingList
-          listName={'List 1'}
-          items={['Item 1', 'Item 2', 'Item 3']}
-        />
-        <ShoppingList listName={'List 2'} items={['Item 4', 'Item 5']} />
-        <ShoppingList listName={'List 3'} items={['Item 6']} />
+        <ShoppingList listName={'List 1'} items={lists.list1} />
+        <ShoppingList listName={'List 2'} items={lists.list2} />
+        <ShoppingList listName={'List 3'} items={lists.list3} />
       </div>
     </>
   )
