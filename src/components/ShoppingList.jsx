@@ -33,7 +33,7 @@ function ShoppingList({ listName, items }) {
 export default ShoppingList
 
 // -- THINGS TO ADD:
-// [] Props: which ones do I need to get from App.jsx?
+// [X] Props: which ones do I need to get from App.jsx?
 // [] Investigate how to handle moving items between lists (Redux?)
 // [] Move shopping list <h3> outside of gray div
 // [X] Add styling to each list items (see Figma)
