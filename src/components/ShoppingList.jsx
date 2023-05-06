@@ -1,4 +1,5 @@
 import AddItemForm from './AddItemForm'
+import MoveItemSelect from './MoveItemSelect'
 
 function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
   const handleAddItem = (newItem) => {
@@ -24,14 +25,10 @@ function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
             >
               <p className="font-mono text-sm text-gray-900">{item.name}</p>
               <div className="ml-4">
-                <select onChange={(e) => handleMoveItem(index, e.target.value)}>
-                  <option>Select list</option>
-                  {['List 1', 'List 2', 'List 3'].map((listName) => (
-                    <option key={listName} value={`list${listName.charAt(5)}`}>
-                      {listName}
-                    </option>
-                  ))}
-                </select>
+                <MoveItemSelect
+                  options={selectOptions}
+                  onChange={(e) => handleMoveItem(index, e.target.value)}
+                />
               </div>
             </li>
           ))}
