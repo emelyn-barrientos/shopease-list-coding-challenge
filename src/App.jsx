@@ -34,11 +34,14 @@ function App() {
 
   const handleAddItem = (newItem, listName) => {
     setLists((prevLists) => {
-      const newList = [...prevLists[listName], newItem]
-      return {
-        ...prevLists,
-        [listName]: newList,
+      const listIndex = prevLists.findIndex((list) => list.name === listName)
+      if (listIndex > -1) {
+        const newList = [...prevLists[listIndex].items, newItem]
+        const updatedLists = [...prevLists]
+        updatedLists[listIndex] = { ...prevLists[listIndex], items: newList }
+        return updatedLists
       }
+      return prevLists
     })
   }
 
