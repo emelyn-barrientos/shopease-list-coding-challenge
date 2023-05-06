@@ -1,33 +1,13 @@
 import AddItemForm from './AddItemForm'
-import { useState } from 'react'
 
-function ShoppingList({ listName, items, onMoveItem, fromList }) {
-  const [itemsState, setItemsState] = useState([...items])
-
+function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
   const handleAddItem = (newItem) => {
-    setItemsState((prevState) => [...prevState, newItem])
+    onAddItem(newItem, listId)
   }
 
-  const handleMoveItem = (index, selectedList) => {
-    const updatedItems = [...itemsState]
-    const itemToMove = updatedItems[index]
-    updatedItems.splice(index, 1)
-
-    switch (selectedList) {
-      case 'List 1':
-        onMoveItem({ ...itemToMove }, 'List 1', fromList)
-        break
-      case 'List 2':
-        onMoveItem({ ...itemToMove }, 'List 2', fromList)
-        break
-      case 'List 3':
-        onMoveItem({ ...itemToMove }, 'List 3', fromList)
-        break
-      default:
-        break
-    }
-
-    setItemsState(updatedItems)
+  const handleMoveItem = (index, selectedListId) => {
+    const itemToMove = items[index]
+    onMoveItem(itemToMove, listId, selectedListId)
   }
 
   return (
@@ -37,18 +17,20 @@ function ShoppingList({ listName, items, onMoveItem, fromList }) {
       </h3>
       <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6 h-full flex flex-col justify-between">
         <ul className="divide-y divide-gray-300 flex-grow">
-          {itemsState.map((item, index) => (
+          {items.map((item, index) => (
             <li
-              key={index}
+              key={item.id}
               className="flex items-center rounded-md bg-white mb-4 px-3 py-2"
             >
-              <p className="font-mono text-sm text-gray-900">{item}</p>
+              <p className="font-mono text-sm text-gray-900">{item.name}</p>
               <div className="ml-4">
                 <select onChange={(e) => handleMoveItem(index, e.target.value)}>
                   <option>Select list</option>
-                  <option>List 1</option>
-                  <option>List 2</option>
-                  <option>List 3</option>
+                  {['List 1', 'List 2', 'List 3'].map((listName) => (
+                    <option key={listName} value={`list${listName.charAt(5)}`}>
+                      {listName}
+                    </option>
+                  ))}
                 </select>
               </div>
             </li>
