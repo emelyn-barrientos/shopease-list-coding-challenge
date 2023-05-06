@@ -14,7 +14,7 @@ function AddItemForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex justify-between mt-48">
+    <form onSubmit={handleSubmit} className="flex justify-between mt-40">
       <div className="flex w-full">
         <input
           type="text"
