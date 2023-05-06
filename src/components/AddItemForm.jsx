@@ -9,6 +9,7 @@ function AddItemForm(props) {
   }
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     const newItemWithId = {
       id: lastId + 1,
       name: newItem,
