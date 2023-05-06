@@ -35,7 +35,7 @@ export default ShoppingList
 // -- THINGS TO ADD:
 // [X] Props: which ones do I need to get from App.jsx?
 // [] Investigate how to handle moving items between lists (Redux?)
-// [] Move shopping list <h3> outside of gray div
+// [X] Move shopping list <h3> outside of gray div
 // [X] Add styling to each list items (see Figma)
 // [X] Add space between items and forms
 // [] Add fixed height to list
