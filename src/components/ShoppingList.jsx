@@ -22,7 +22,7 @@ function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
       <h3 className="font-mono font-bold text-xl text-center mb-4">
         {listName}
       </h3>
-      <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-6 h-full flex flex-col justify-between">
+      <div className="bg-gray-300 shadow-lg rounded-lg px-4 py-4 h-full flex flex-col justify-between">
         <ul className="divide-y divide-gray-300 flex-grow">
           {items.map((item, index) => (
             <li
