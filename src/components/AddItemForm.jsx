@@ -33,7 +33,7 @@ function AddItemForm(props) {
           type="submit"
           className="bg-white hover:bg-blue-600 text-gray-900 hover:text-white font-mono text-md rounded-md px-4 py-2"
         >
-          GO
+          ADD
         </button>
       </div>
     </form>

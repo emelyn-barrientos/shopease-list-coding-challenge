@@ -57,7 +57,10 @@ function App() {
   return (
     <>
       <Header />
-      <div className="grid grid-cols-3 gap-10 mt-16 mx-60">
+      <div
+        className="grid grid-cols-3 gap-10 mt-16 mx-48
+       "
+      >
         {lists.map((list) => (
           <ShoppingList
             key={list.id}
