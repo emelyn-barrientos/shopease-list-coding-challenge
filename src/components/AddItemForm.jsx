@@ -41,7 +41,3 @@ function AddItemForm(props) {
 }
 
 export default AddItemForm
-
-// -- THINGS TO ADD:
-// [X] Must require text input to form to submit
-// [X] Make width of form same width as list items
