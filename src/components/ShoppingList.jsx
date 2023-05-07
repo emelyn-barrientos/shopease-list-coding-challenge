@@ -27,7 +27,7 @@ function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
           {items.map((item, index) => (
             <li
               key={item.id}
-              className="flex items-center justify-between rounded-md bg-white mb-4 px-3 py-2"
+              className="flex items-center justify-between rounded-md bg-white mb-4 px-2 py-2"
             >
               <p className="font-mono text-sm text-gray-900">{item.name}</p>
               <div className="ml-auto">
