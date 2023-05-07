@@ -13,9 +13,9 @@ When investigating options for moving items between lists, I initially investiga
 
 
 ## NEXT STEPS ▶️ ##
-- [] Add feature for use to check off completed list
-- [] Add feature for user to create new list
-- [] Media queries
+- [ ] Add feature for use to check off completed list
+- [ ] Add feature for user to create new list
+- [ ] Media queries
 
 
 ### Installation
