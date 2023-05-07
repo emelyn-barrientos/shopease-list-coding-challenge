@@ -79,6 +79,3 @@ function App() {
 }
 
 export default App
-
-// -- THINGS TO ADD:
-// [X] Props: which ones do I need to pass down to ShoppingList.jsx?

@@ -48,11 +48,3 @@ function ShoppingList({ listName, items, onMoveItem, onAddItem, listId }) {
 }
 
 export default ShoppingList
-
-// -- THINGS TO ADD:
-// [X] Props: which ones do I need to get from App.jsx?
-// [X] Investigate how to handle moving items between lists (Redux? or npm package?)
-// [X] Move shopping list <h3> outside of gray div
-// [X] Add styling to each list items (see Figma)
-// [X] Add space between items and forms
-// [X] Add fixed height to list
