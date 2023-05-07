@@ -57,20 +57,22 @@ function App() {
   return (
     <>
       <Header />
-      <div
-        className="grid grid-cols-3 gap-10 mt-16 mx-48
+      <div className="max-w-screen-xl mx-auto">
+        <div
+          className="grid grid-cols-3 gap-10 mt-16 mx-40
        "
-      >
-        {lists.map((list) => (
-          <ShoppingList
-            key={list.id}
-            listName={list.name}
-            items={list.items}
-            onMoveItem={handleMoveItem}
-            onAddItem={handleAddItem}
-            listId={list.id}
-          />
-        ))}
+        >
+          {lists.map((list) => (
+            <ShoppingList
+              key={list.id}
+              listName={list.name}
+              items={list.items}
+              onMoveItem={handleMoveItem}
+              onAddItem={handleAddItem}
+              listId={list.id}
+            />
+          ))}
+        </div>
       </div>
     </>
   )
